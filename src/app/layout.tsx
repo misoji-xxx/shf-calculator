@@ -3,11 +3,12 @@ import './globals.css'
 import { withBasePath } from '@/lib/path'
 
 const iconPath = withBasePath('/favicon.ico')
-const ogImage = withBasePath('/img/og_image.png')
+const ogImage = 'https://misoji-xxx.github.io/shf-calculator/img/og_image.png'
 
 export const metadata: Metadata = {
   title: 'ShapeHero Factory Calculator',
   description: 'ShapeHero Factory生産計算ツール',
+  metadataBase: new URL('https://misoji-xxx.github.io'),
   icons: {
     icon: iconPath,
   },
