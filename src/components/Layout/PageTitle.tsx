@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { withBasePath } from '@/lib/path'
 import styles from './PageTitle.module.css'
 
 export default function PageTitle() {
@@ -6,7 +7,7 @@ export default function PageTitle() {
         <div className={styles.container}>
             <div className={styles.titleRow}>
                 <Image
-                    src="/img/icon.webp"
+                    src={withBasePath('/img/icon.webp')}
                     alt="ShapeHero Factory"
                     width={40}
                     height={40}
