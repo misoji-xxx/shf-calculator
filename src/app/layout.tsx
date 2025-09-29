@@ -1,12 +1,19 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { withBasePath } from '@/lib/path'
+
+const iconPath = withBasePath('/favicon.ico')
+const ogImage = withBasePath('/img/og_image.png')
 
 export const metadata: Metadata = {
   title: 'ShapeHero Factory Calculator',
   description: 'ShapeHero Factory生産計算ツール',
   icons: {
-    icon: '/favicon.ico',
+    icon: iconPath,
   },
+  openGraph: {
+    images: [ogImage]
+  }
 }
 
 export default function RootLayout({

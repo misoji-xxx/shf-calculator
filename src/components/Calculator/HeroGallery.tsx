@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Hero } from '@/types/hero'
+import { withBasePath } from '@/lib/path'
 import styles from './HeroGallery.module.css'
 
 interface HeroGalleryProps {
@@ -27,12 +28,12 @@ const getRankOrder = (rank: string): number => {
 const resolveHeroIcon = (hero: Hero): string => {
   // JSONのiconを最優先
   if (hero.icon) {
-    return `/${hero.icon}`
+    return withBasePath(`/${hero.icon}`)
   }
 
   // idをPascalCaseに変換してimg/*.webpを試行
   const pascalCase = hero.id.charAt(0).toUpperCase() + hero.id.slice(1)
-  return `/img/${pascalCase}.webp`
+  return withBasePath(`/img/${pascalCase}.webp`)
 }
 
 export default function HeroGallery({
@@ -131,7 +132,7 @@ export default function HeroGallery({
                           // フォールバック処理
                           const target = e.target as HTMLImageElement
                           if (!target.src.includes('icon.webp')) {
-                            target.src = '/img/icon.webp'
+                            target.src = withBasePath('/img/icon.webp')
                           }
                         }}
                       />
@@ -175,7 +176,7 @@ export default function HeroGallery({
                           // フォールバック処理
                           const target = e.target as HTMLImageElement
                           if (!target.src.includes('icon.webp')) {
-                            target.src = '/img/icon.webp'
+                            target.src = withBasePath('/img/icon.webp')
                           }
                         }}
                       />

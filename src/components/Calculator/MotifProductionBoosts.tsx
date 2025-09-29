@@ -1,6 +1,7 @@
 'use client'
 
 import { MotifProductionBoosts as MotifBoosts } from '@/types/calculator'
+import { withBasePath } from '@/lib/path'
 import styles from './MotifProductionBoosts.module.css'
 
 interface MotifProductionBoostsProps {
@@ -11,9 +12,9 @@ interface MotifProductionBoostsProps {
 const BOOST_OPTIONS = [100, 125, 150, 175, 200, 225, 250, 275, 300]
 
 const MOTIF_CONFIG = {
-  circle: { label: '円', icon: '/img/circle.webp' },
-  square: { label: '四角', icon: '/img/square.webp' },
-  triangle: { label: '三角', icon: '/img/triangle.webp' }
+  circle: { label: '円', icon: withBasePath('/img/circle.webp') },
+  square: { label: '四角', icon: withBasePath('/img/square.webp') },
+  triangle: { label: '三角', icon: withBasePath('/img/triangle.webp') }
 } as const
 
 export default function MotifProductionBoosts({ motifBoosts, onMotifBoostChange }: MotifProductionBoostsProps) {

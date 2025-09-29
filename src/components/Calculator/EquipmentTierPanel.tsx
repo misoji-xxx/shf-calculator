@@ -3,6 +3,7 @@
 import { EquipmentTier, EquipmentTierSettings, SpellGeneratorOptions, EquipmentData } from '@/types/calculator'
 import { useCalculatorContext } from '@/contexts/CalculatorContext'
 import { useDatabase } from '@/hooks/useDatabase'
+import { withBasePath } from '@/lib/path'
 import styles from './EquipmentTierPanel.module.css'
 
 interface EquipmentTierPanelProps {
@@ -43,13 +44,16 @@ export default function EquipmentTierPanel({ settings, onSettingsChange, spellGe
   // 設備アイコンを取得する関数
   const getEquipmentIcon = (equipmentType: keyof EquipmentData, tier: EquipmentTier): string => {
     if (!equipments || !equipments[equipmentType]) {
-      return '/img/icon.webp' // フォールバック
+      return withBasePath('/img/icon.webp') // フォールバック
     }
 
     const equipment = equipments[equipmentType]
     const tierData = equipment.tiers?.[tier]
-
-    return tierData?.icon || equipment.icon || '/img/icon.webp'
+    const raw = tierData?.icon || equipment.icon
+    if (raw && raw.length > 0) {
+      return withBasePath(raw.startsWith('/') ? raw : `/${raw}`)
+    }
+    return withBasePath('/img/icon.webp')
   }
 
   const handleTierChange = (equipmentType: keyof EquipmentTierSettings, tier: EquipmentTier) => {
@@ -107,7 +111,7 @@ export default function EquipmentTierPanel({ settings, onSettingsChange, spellGe
                         onError={(e) => {
                           const target = e.target as HTMLImageElement
                           if (!target.src.includes('icon.webp')) {
-                            target.src = '/img/icon.webp'
+                            target.src = withBasePath('/img/icon.webp')
                           }
                         }}
                       />
@@ -147,7 +151,7 @@ export default function EquipmentTierPanel({ settings, onSettingsChange, spellGe
                         onError={(e) => {
                           const target = e.target as HTMLImageElement
                           if (!target.src.includes('icon.webp')) {
-                            target.src = '/img/icon.webp'
+                            target.src = withBasePath('/img/icon.webp')
                           }
                         }}
                       />

@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { withBasePath } from '@/lib/path'
 import styles from './MasterTypeSelector.module.css'
 
 export type MasterType = 'minion' | 'spell'
@@ -23,7 +24,7 @@ export default function MasterTypeSelector({
           onClick={() => onMasterChange('minion')}
         >
           <Image
-            src="/img/icon_author_MinionMaster_2.webp"
+            src={withBasePath('/img/icon_author_MinionMaster_2.webp')}
             alt="ミニオンマスター"
             width={28}
             height={28}
@@ -37,7 +38,7 @@ export default function MasterTypeSelector({
           onClick={() => onMasterChange('spell')}
         >
           <Image
-            src="/img/icon_author_Fairy_2.webp"
+            src={withBasePath('/img/icon_author_Fairy_2.webp')}
             alt="スペルマスター"
             width={28}
             height={28}

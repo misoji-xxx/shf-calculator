@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { Hero, HeroData } from '@/types/hero'
 import { EquipmentData, PartsData, MotifsData, Part } from '@/types/calculator'
 import { MasterType } from '@/components/Calculator/MasterTypeSelector'
+import { withBasePath } from '@/lib/path'
 
 export function useDatabase() {
   const [heroes, setHeroes] = useState<Hero[]>([])
@@ -20,9 +21,9 @@ export function useDatabase() {
       
       // 並行してすべてのデータを読み込み
       const [partsRes, equipmentsRes, motifsRes] = await Promise.all([
-        fetch('/data/parts.json'),
-        fetch('/data/equipments.json'),
-        fetch('/data/motifs.json')
+        fetch(withBasePath('/data/parts.json')),
+        fetch(withBasePath('/data/equipments.json')),
+        fetch(withBasePath('/data/motifs.json'))
       ])
 
       if (!partsRes.ok || !equipmentsRes.ok || !motifsRes.ok) {
@@ -48,7 +49,7 @@ export function useDatabase() {
   const loadHeroes = async (masterType: MasterType) => {
     try {
       const filename = masterType === 'minion' ? 'heroes_minion.json' : 'heroes_spell.json'
-      const response = await fetch(`/data/${filename}`)
+      const response = await fetch(withBasePath(`/data/${filename}`))
       
       if (!response.ok) {
         throw new Error(`Failed to load ${filename}`)

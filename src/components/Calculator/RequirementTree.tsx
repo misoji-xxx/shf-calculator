@@ -3,6 +3,7 @@
 import { RequirementNode, MotifsData, EquipmentCount, Part } from '@/types/calculator'
 import { Hero } from '@/types/hero'
 import styles from './RequirementTree.module.css'
+import { withBasePath } from '@/lib/path'
 
 interface RequirementTreeProps {
   tree: RequirementNode | null
@@ -20,11 +21,11 @@ function formatNumber(value: number): string {
 
 function getMotifIcon(motifId: string, motifs: MotifsData | null): string {
   if (!motifs || !motifs.icons[motifId]) {
-    return '/img/icon.webp' // フォールバック
+    return withBasePath('/img/icon.webp') // フォールバック
   }
 
   const iconPath = motifs.icons[motifId][0]
-  return `/${iconPath}`
+  return withBasePath(`/${iconPath}`)
 }
 
 function getEntityIcon(entityId: string, heroes: Hero[] | null, spells: Hero[] | null, parts: Part[] | null): string {
@@ -32,7 +33,7 @@ function getEntityIcon(entityId: string, heroes: Hero[] | null, spells: Hero[] |
   if (heroes) {
     const hero = heroes.find(h => h.id === entityId)
     if (hero && hero.icon) {
-      return `/${hero.icon}`
+      return withBasePath(`/${hero.icon}`)
     }
   }
   
@@ -40,7 +41,7 @@ function getEntityIcon(entityId: string, heroes: Hero[] | null, spells: Hero[] |
   if (spells) {
     const spell = spells.find(s => s.id === entityId)
     if (spell && spell.icon) {
-      return `/${spell.icon}`
+      return withBasePath(`/${spell.icon}`)
     }
   }
   
@@ -48,28 +49,28 @@ function getEntityIcon(entityId: string, heroes: Hero[] | null, spells: Hero[] |
   if (parts) {
     const part = parts.find(p => p.id === entityId)
     if (part && part.icon) {
-      return `/${part.icon}`
+      return withBasePath(`/${part.icon}`)
     }
   }
   
   // フォールバック: 既存システムと同じ命名規則
-  return `/img/${entityId}.webp`
+  return withBasePath(`/img/${entityId}.webp`)
 }
 
 function getCanvasIcon(): string {
   // 既存システムと同じキャンバスアイコン
-  return '/img/icon_Canvas_Minion.webp'
+  return withBasePath('/img/icon_Canvas_Minion.webp')
 }
 
 function getEquipmentIcon(equipmentType: string): string {
   const iconMap: Record<string, string> = {
-    motifMaker: '/img/icon_Drawmotif_Minion.webp',
-    pipette: '/img/icon_UptakeInk_Minion.webp',
-    mixer: '/img/icon_MixColor_Minion.webp',
-    scissors: '/img/icon_Cutter_Minion.webp',
-    tutuHouse: '/img/ChuChuHouse.webp',
-    albedoMaker: '/img/icon_Albedo_Normal.webp',
-    inkBottleMaker: '/img/icon_InkBottleProcessor_Minion.webp'
+    motifMaker: withBasePath('/img/icon_Drawmotif_Minion.webp'),
+    pipette: withBasePath('/img/icon_UptakeInk_Minion.webp'),
+    mixer: withBasePath('/img/icon_MixColor_Minion.webp'),
+    scissors: withBasePath('/img/icon_Cutter_Minion.webp'),
+    tutuHouse: withBasePath('/img/ChuChuHouse.webp'),
+    albedoMaker: withBasePath('/img/icon_Albedo_Normal.webp'),
+    inkBottleMaker: withBasePath('/img/icon_InkBottleProcessor_Minion.webp')
   }
 
   return iconMap[equipmentType] || '/img/icon.webp'
@@ -92,7 +93,7 @@ function renderEquipmentCounts(equipment: EquipmentCount): React.ReactNode {
             className={styles.equipmentIcon}
             onError={(e) => {
               const target = e.target as HTMLImageElement
-              target.src = '/img/icon.webp'
+              target.src = withBasePath('/img/icon.webp')
             }}
           />
           <span className={styles.equipmentCount}>{count}</span>
