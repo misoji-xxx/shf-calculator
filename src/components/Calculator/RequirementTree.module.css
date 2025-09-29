@@ -1,0 +1,203 @@
+/* Tree section - 既存システムのスタイルに合わせて移植 */
+.container {
+  margin-top: 40px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.controls {
+  margin: 6px 0;
+}
+
+.checkbox {
+  cursor: pointer;
+  font-weight: normal;
+  width: auto;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.empty {
+  text-align: center;
+  padding: 40px;
+  color: var(--color-muted);
+  background: var(--color-bg-soft);
+  border-radius: 8px;
+}
+
+/* Tree table - 既存システムと同じスタイル */
+.tree {
+  width: auto;
+  display: inline-table;
+  border-collapse: collapse;
+  font-size: 13px;
+  table-layout: fixed;
+}
+
+.tree th,
+.tree td {
+  border: 1px solid var(--color-border);
+  padding: 8px 8px;
+  vertical-align: middle;
+}
+
+.tree th {
+  background: var(--color-bg-soft);
+  text-align: center;
+}
+
+.heroHeader {
+  text-align: left !important;
+  width: 200px;
+}
+
+.canvasHeader {
+  width: 30px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.motifHeader {
+  width: 100px;
+  font-size: 13px;
+}
+
+/* Hero cell - 既存システムのスタイル */
+.heroCell {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.indent {
+  display: inline-block;
+}
+
+.heroIcon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.canvasCell {
+  text-align: center;
+  font-size: 13px;
+}
+
+/* Motif cell - 既存システムの2行レイアウト */
+.motifCell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.equipmentLine {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+}
+
+.equipmentPair {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  background: var(--color-bg-light);
+  border-radius: 20px;
+  padding: 5px 10px 4px;
+  line-height: 1;
+}
+
+.equipmentIcon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.equipmentCount {
+  vertical-align: middle;
+}
+
+.materialLine {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  color: var(--color-muted);
+  font-weight: normal;
+  font-size: 12px;
+  background: transparent;
+  padding: 4px 0 0;
+  justify-content: center;
+}
+
+.motifIcon {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.motifCount {
+  vertical-align: middle;
+}
+
+/* Icons - 既存システムのアイコンサイズ */
+.headerIcon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+
+  /* テーブル部分のみ横スクロール */
+  .tableWrapper {
+    margin-left: -12px;
+    margin-right: -12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    overflow-x: auto;
+  }
+
+  .tree {
+    min-width: 600px;
+  }
+
+  /* インデントを非表示 */
+  .indent {
+    display: none;
+  }
+
+  /* ヒーロー名を非表示、画像のみ表示 */
+  .heroCell span {
+    display: none;
+  }
+
+  .heroCell {
+    justify-content: center;
+  }
+
+  /* ヒーローヘッダーのテキストを非表示 */
+  .heroHeader {
+    text-indent: -9999px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}

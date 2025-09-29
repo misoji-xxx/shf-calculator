@@ -1,0 +1,29 @@
+/* Page disclaimer - 既存システムのスタイルを移植 */
+.disclaimer {
+    color: var(--color-muted);
+    font-size: 12px;
+    margin-top: 24px;
+}
+
+.content {
+    flex: 1;
+}
+
+.version {
+    font-size: 10px;
+    color: var(--color-muted);
+    font-weight: normal;
+    text-align: right;
+    white-space: nowrap;
+    margin-left: 16px;
+    margin-top: 16px;
+}
+
+.disclaimer a {
+    color: var(--color-muted);
+    text-decoration: underline;
+}
+
+.disclaimer a:hover {
+    text-decoration: none;
+}

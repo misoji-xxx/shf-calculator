@@ -1,0 +1,263 @@
+{
+  "heroes": [
+    {
+      "id": "human",
+      "name": "ヒト",
+      "rank": "D",
+      "icon": "img/Human.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 2,
+      "recipe": {
+        "circle": 1,
+        "triangle": 1
+      }
+    },
+    {
+      "id": "shield",
+      "name": "盾兵",
+      "rank": "C",
+      "icon": "img/ShieldSoldier.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 4,
+      "recipe": {
+        "human": 1,
+        "square": 1
+      }
+    },
+    {
+      "id": "spearsoldier",
+      "name": "槍兵",
+      "rank": "C",
+      "icon": "img/SpearSoldier.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 4,
+      "recipe": {
+        "human": 1,
+        "spear": 1
+      }
+    },
+    {
+      "id": "hoplite",
+      "name": "重装歩兵",
+      "rank": "B",
+      "icon": "img/Hoplite.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 8,
+      "recipe": {
+        "spearsoldier": 1,
+        "shield": 1
+      }
+    },
+    {
+      "id": "lightcavalry",
+      "name": "軽騎兵",
+      "rank": "B",
+      "icon": "img/LightCavalry.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 6,
+      "recipe": {
+        "spearsoldier": 1,
+        "horse": 1
+      }
+    },
+    {
+      "id": "knight",
+      "name": "騎士",
+      "rank": "A",
+      "icon": "img/Knight.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 8,
+      "recipe": {
+        "lightcavalry": 1,
+        "shield": 1,
+        "star": 1
+      }
+    },
+    {
+      "id": "horse",
+      "name": "ウマ",
+      "rank": "C",
+      "icon": "img/Horse.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 4,
+      "recipe": {
+        "rect": 1,
+        "trapezoid": 1
+      }
+    },
+    {
+      "id": "unicorn",
+      "name": "ユニコーン",
+      "rank": "B",
+      "icon": "img/Unicorn.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 4,
+      "recipe": {
+        "horse": 1,
+        "horn": 1
+      }
+    },
+    {
+      "id": "pegasus",
+      "name": "ペガサス",
+      "rank": "A",
+      "icon": "img/Pegasus.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 6,
+      "recipe": {
+        "unicorn": 1,
+        "wing": 1
+      }
+    },
+    {
+      "id": "pegasusknight",
+      "name": "ペガサス騎兵",
+      "rank": "S",
+      "icon": "img/PegasusKnight.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 8,
+      "recipe": {
+        "pegasus": 1,
+        "archer": 1,
+        "heart": 1
+      }
+    },
+    {
+      "id": "wizard",
+      "name": "魔法使い",
+      "rank": "C",
+      "icon": "img/Wizard.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 4,
+      "recipe": {
+        "human": 1,
+        "triangle": 1
+      }
+    },
+    {
+      "id": "druid",
+      "name": "ドルイド",
+      "rank": "C",
+      "icon": "img/Druid.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 2,
+      "recipe": {
+        "wizard": 1,
+        "ink_green": 1
+      }
+    },
+    {
+      "id": "archwizard",
+      "name": "大魔法使い",
+      "rank": "B",
+      "icon": "img/Wise.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 6,
+      "recipe": {
+        "wizard": 1,
+        "magicwand": 1
+      }
+    },
+    {
+      "id": "sage",
+      "name": "賢者",
+      "rank": "A",
+      "icon": "img/Sage.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 8,
+      "recipe": {
+        "archwizard": 1,
+        "orb": 1,
+        "ink_magenta": 1
+      }
+    },
+    {
+      "id": "archer",
+      "name": "弓兵",
+      "rank": "C",
+      "icon": "img/Archer.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 4,
+      "recipe": {
+        "human": 1,
+        "semicircle": 1
+      }
+    },
+    {
+      "id": "sniper",
+      "name": "スナイパー",
+      "rank": "B",
+      "icon": "img/Sniper.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 6,
+      "recipe": {
+        "archer": 1,
+        "rifle": 1
+      }
+    },
+    {
+      "id": "canoneer",
+      "name": "砲撃手",
+      "rank": "A",
+      "icon": "img/Canoneer.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 9,
+      "recipe": {
+        "sniper": 1,
+        "cannon": 1
+      }
+    },
+    {
+      "id": "hitman",
+      "name": "ヒットマン",
+      "rank": "A",
+      "icon": "img/Hitman.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 6,
+      "recipe": {
+        "sniper": 1,
+        "thief": 1,
+        "heart": 1
+      }
+    },
+    {
+      "id": "thief",
+      "name": "シーフ",
+      "rank": "C",
+      "icon": "img/Thief.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 2,
+      "recipe": {
+        "human": 1,
+        "blackcloth": 1
+      }
+    },
+    {
+      "id": "ninja",
+      "name": "忍者",
+      "rank": "B",
+      "icon": "img/Ninja.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 4,
+      "recipe": {
+        "thief": 1,
+        "shuriken": 1
+      }
+    },
+    {
+      "id": "ninjamaster",
+      "name": "忍術マスター",
+      "rank": "A",
+      "icon": "img/NinjaMaster.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 6,
+      "recipe": {
+        "ninja": 1,
+        "wizard": 1,
+        "ink_red": 1
+      }
+    }
+  ]
+}
+
+

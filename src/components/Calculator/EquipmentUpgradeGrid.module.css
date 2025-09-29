@@ -1,0 +1,83 @@
+/* EquipmentUpgradeGrid - 既存システムのスタイルに合わせて移植 */
+
+.unlockGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: flex-start;
+  margin-bottom: 0;
+}
+
+.unlockGridColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  width: calc((100% - 48px) / 5);
+}
+
+.unlockGridRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.unlockGridRow span {
+  font-size: 12px;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.unlockGridHeader {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.unlockGridIcon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+/* Unlock inputs width */
+.unlockGridColumn > select,
+.unlockGridColumn > .unlockGridSelect {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.unlockGridRow select,
+.unlockGridRow .unlockGridSelect {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+/* Unlock: ハサミ 出力ポート×2 の上下余白を詰める */
+.unlockGridColumn .checkbox__label {
+  margin-top: 4px;
+  margin-bottom: 0;
+  line-height: 1.2;
+}/* モ
+バイル対応 - 5カラムを2カラムに */
+@media (max-width: 768px) {
+  .unlockGridColumn {
+    width: calc((100% - 12px) / 2);
+  }
+
+  .unlockGridColumn + .unlockGridColumn {
+    margin-top: 12px;
+  }
+}
+
+/* 小さなモバイル - 1カラムに */
+@media (max-width: 480px) {
+  .unlockGridColumn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "icons": {
+    "circle": [
+      "img/circle.webp"
+    ],
+    "square": [
+      "img/square.webp"
+    ],
+    "triangle": [
+      "img/triangle.webp"
+    ],
+    "rect": [
+      "img/square_h.webp"
+    ],
+    "semicircle": [
+      "img/circle_h.webp"
+    ],
+    "trapezoid": [
+      "img/triangle_h.webp"
+    ],
+    "star": [
+      "img/Star.webp"
+    ],
+    "heart": [
+      "img/Heart.webp"
+    ],
+    "ink_red": [
+      "img/Red.webp"
+    ],
+    "ink_blue": [
+      "img/Blue.webp"
+    ],
+    "ink_green": [
+      "img/Green.webp"
+    ],
+    "ink_black": [
+      "img/Black.webp"
+    ],
+    "ink_cyan": [
+      "img/Lightblue.webp"
+    ],
+    "ink_magenta": [
+      "img/Purple.webp"
+    ],
+    "ink_yellow": [
+      "img/Yellow.webp"
+    ],
+    "ink_white": [
+      "img/White.webp"
+    ]
+  }
+}

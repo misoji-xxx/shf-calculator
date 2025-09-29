@@ -1,0 +1,6 @@
+/* CalculationOptions - 既存システムのスタイルに合わせて移植 */
+
+.otherOptions {
+  display: grid;
+  grid-template-columns: 1fr;
+}

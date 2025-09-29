@@ -1,0 +1,105 @@
+/* EquipmentTierPanel - 既存システムのスタイルに合わせて移植 */
+
+.equipmentGroups {
+  display: flex;
+  align-items: flex-start;
+}
+
+.equipmentGroups+.equipmentGroups,
+.equipmentGroups+.spellEquipmentGroups {
+  margin-top: 12px;
+}
+
+/* Spell Equipment Groups */
+.spellEquipmentGroups {
+  display: flex;
+  align-items: flex-start;
+}
+
+.spellEquipmentGroups .equipmentGroup {
+  width: 25%;
+  margin-left: 0;
+}
+
+.equipmentGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  width: 25%;
+}
+
+.equipmentGroupLabel {
+  font-size: 12px;
+  width: auto;
+  min-width: 0;
+  flex: 0 0 auto;
+}
+
+.equipmentGroup+.equipmentGroup {
+  margin-left: 18px;
+}
+
+.equipmentGroupTiers {
+  display: flex;
+  gap: 4px;
+  padding: 4px 0;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.tierCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 10px 10px 6px;
+  cursor: pointer;
+  width: calc((100% - 16px) / 3);
+  flex: 0 0 auto;
+  background: var(--color-white);
+}
+
+.tierCardIcon {
+  width: clamp(24px, 2.5vw, 32px);
+  height: clamp(24px, 2.5vw, 32px);
+  object-fit: contain;
+}
+
+.tierCardName {
+  font-size: 12px;
+}
+
+.spellGeneratorOptions {
+  margin-top: 0px;
+}
+
+/* モバイル対応 - 4カラムを2カラムに */
+@media (max-width: 768px) {
+  .equipmentGroups {
+    flex-wrap: wrap;
+  }
+
+  .equipmentGroup {
+    width: calc(50% - 9px);
+  }
+
+  .spellEquipmentGroups .equipmentGroup {
+    width: 100%;
+  }
+
+  .equipmentGroup + .equipmentGroup {
+    margin-top: 12px;
+  }
+}
+
+/* 小さなモバイル - 1カラムに */
+@media (max-width: 480px) {
+  .equipmentGroup {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+}

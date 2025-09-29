@@ -1,0 +1,144 @@
+{
+  "canvas": {
+    "cycleSec": 1,
+    "icon": "img/icon_Canvas_Minion.webp",
+    "tiers": {
+      "base": {
+        "cycleSec": 1.0,
+        "icon": "img/icon_Canvas_Minion.webp"
+      },
+      "high": {
+        "cycleSec": 1.5,
+        "icon": "img/icon_Canvas_MinionExpress.webp"
+      },
+      "top": {
+        "cycleSec": 3.0,
+        "icon": "img/icon_Canvas_MinionRapid.webp"
+      }
+    }
+  },
+  "compositeCanvas": {
+    "cycleSec": 1,
+    "icon": "img/icon_Canvas_Minion.webp",
+    "tiers": {
+      "base": {
+        "cycleSec": 1.0,
+        "icon": "img/icon_Canvas_Minion.webp"
+      },
+      "high": {
+        "cycleSec": 1.5,
+        "icon": "img/icon_Canvas_MinionExpress.webp"
+      },
+      "top": {
+        "cycleSec": 3.0,
+        "icon": "img/icon_Canvas_MinionRapid.webp"
+      }
+    }
+  },
+  "motifMaker": {
+    "icon": "img/icon_Drawmotif_Minion.webp",
+    "circle": {
+      "ratePerSec": 1
+    },
+    "triangle": {
+      "ratePerSec": 1
+    },
+    "square": {
+      "ratePerSec": 1
+    },
+    "baseCycleSec": 2.0,
+    "bonus": 2.0,
+    "tiers": {
+      "base": {
+        "cycleSec": 2.0,
+        "icon": "img/icon_Drawmotif_Minion.webp"
+      },
+      "high": {
+        "cycleSec": 1.33,
+        "icon": "img/icon_Drawmotif_EliteMinion.webp"
+      },
+      "top": {
+        "cycleSec": 1.0,
+        "icon": "img/icon_Drawmotif_ExpertMinion.webp"
+      }
+    }
+  },
+  "scissors": {
+    "cycleSec": 0.5,
+    "icon": "img/icon_Cutter_Minion.webp"
+  },
+  "pipette": {
+    "ratePerSec": 3,
+    "icon": "img/icon_UptakeInk_Minion.webp",
+    "inks": [
+      "ink_red",
+      "ink_blue",
+      "ink_green",
+      "ink_black"
+    ],
+    "tiers": {
+      "base": {
+        "ratePerSec": 3.0,
+        "icon": "img/icon_UptakeInk_Minion.webp"
+      },
+      "high": {
+        "ratePerSec": 4.5,
+        "icon": "img/icon_UptakeInk_EliteMinion.webp"
+      },
+      "top": {
+        "ratePerSec": 6.0,
+        "icon": "img/icon_UptakeInk_ExpertMinion.webp"
+      }
+    }
+  },
+  "tutuHouse": {
+    "ratePerSec": 1,
+    "icon": "img/ChuChuHouse.webp"
+  },
+  "mixer": {
+    "ratePerSec": 1,
+    "efficiency": 0.5,
+    "icon": "img/icon_MixColor_Minion.webp",
+    "recipes": {
+      "ink_magenta": [
+        "ink_blue",
+        "ink_red"
+      ],
+      "ink_cyan": [
+        "ink_blue",
+        "ink_green"
+      ],
+      "ink_yellow": [
+        "ink_red",
+        "ink_green"
+      ]
+    }
+  },
+  "inkBottleMaker": {
+    "ratePerSec": 1.0,
+    "icon": "img/icon_InkBottleProcessor_Minion.webp"
+  },
+  "albedoMaker": {
+    "ratePerSec": 1.0,
+    "efficiency": 0.33,
+    "icon": "img/icon_Albedo_Normal.webp"
+  },
+  "spellGenerator": {
+    "cycleSec": 1.0,
+    "icon": "img/icon_MiracleOrb_Minion.webp",
+    "tiers": {
+      "base": {
+        "cycleSec": 1.0,
+        "icon": "img/icon_MiracleOrb_Minion.webp"
+      },
+      "high": {
+        "cycleSec": 1.5,
+        "icon": "img/icon_MiracleOrb_MinionExpress.webp"
+      },
+      "top": {
+        "cycleSec": 3.0,
+        "icon": "img/icon_MiracleOrb_MinionRapid.webp"
+      }
+    }
+  }
+}

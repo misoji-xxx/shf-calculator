@@ -1,0 +1,218 @@
+{
+  "parts": [
+    {
+      "id": "spear",
+      "name": "槍",
+      "icon": "img/Spear.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 2,
+      "recipe": {
+        "rect": 1,
+        "triangle": 1
+      }
+    },
+    {
+      "id": "magicwand",
+      "name": "魔法の杖",
+      "icon": "img/MagicWand.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 4,
+      "recipe": {
+        "crystal": 1,
+        "triangle": 1
+      }
+    },
+    {
+      "id": "crystal",
+      "name": "水晶",
+      "icon": "img/Orb.webp",
+      "outputPerCycle": 2,
+      "cycleSec": 2,
+      "recipe": {
+        "circle": 1,
+        "ink_blue": 2
+      }
+    },
+    {
+      "id": "hammer",
+      "name": "ハンマー",
+      "icon": "img/Hammer.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 2,
+      "recipe": {
+        "square": 1,
+        "rect": 1,
+        "ink_black": 1
+      }
+    },
+    {
+      "id": "cheese",
+      "name": "チーズ",
+      "icon": "img/Cheese.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 2,
+      "recipe": {
+        "triangle": 1,
+        "square": 1,
+        "ink_yellow": 1
+      }
+    },
+    {
+      "id": "orb",
+      "name": "オーブ",
+      "icon": "img/MagicOrb.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 4,
+      "recipe": {
+        "circle": 1,
+        "star": 1,
+        "ink_magenta": 1
+      }
+    },
+    {
+      "id": "rifle",
+      "name": "ライフル",
+      "icon": "img/Rifle.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 3,
+      "recipe": {
+        "circle": 1,
+        "rect": 1,
+        "trapezoid": 1
+      }
+    },
+    {
+      "id": "cannon",
+      "name": "大砲",
+      "icon": "img/Cannon.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 3,
+      "recipe": {
+        "wheel": 1,
+        "rect": 1,
+        "bomb": 1
+      }
+    },
+    {
+      "id": "wing",
+      "name": "翼",
+      "icon": "img/Wing.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 2,
+      "recipe": {
+        "semicircle": 2
+      }
+    },
+    {
+      "id": "horn",
+      "name": "角",
+      "icon": "img/Horn.webp",
+      "outputPerCycle": 2,
+      "cycleSec": 2,
+      "recipe": {
+        "triangle": 1,
+        "ink_yellow": 2
+      }
+    },
+    {
+      "id": "shuriken",
+      "name": "手裏剣",
+      "icon": "img/Shuriken.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 2,
+      "recipe": {
+        "square": 2
+      }
+    },
+    {
+      "id": "blackcloth",
+      "name": "黒い布",
+      "icon": "img/BlackCloth.webp",
+      "outputPerCycle": 2,
+      "cycleSec": 1,
+      "recipe": {
+        "square": 1,
+        "ink_black": 2
+      }
+    },
+    {
+      "id": "wheel",
+      "name": "車輪",
+      "icon": "img/Wheel.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 1,
+      "recipe": {
+        "circle": 2
+      }
+    },
+    {
+      "id": "bomb",
+      "name": "ボム",
+      "icon": "img/Bomb.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 4,
+      "recipe": {
+        "circle": 1,
+        "rect": 1,
+        "ink_black": 1
+      }
+    },
+    {
+      "id": "leaf",
+      "name": "葉っぱ",
+      "icon": "img/Leaf.webp",
+      "outputPerCycle": 2,
+      "cycleSec": 2,
+      "recipe": {
+        "triangle": 1,
+        "ink_green": 2
+      }
+    },
+    {
+      "id": "tree",
+      "name": "大木",
+      "icon": "img/Tree.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 3,
+      "recipe": {
+        "leaf": 1,
+        "circle": 1,
+        "trapezoid": 1
+      }
+    },
+    {
+      "id": "sun",
+      "name": "太陽",
+      "icon": "img/Sun.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 2,
+      "recipe": {
+        "circle": 1,
+        "star": 1,
+        "ink_red": 1
+      }
+    },
+    {
+      "id": "coin",
+      "name": "コイン",
+      "icon": "img/Coin.webp",
+      "outputPerCycle": 2,
+      "cycleSec": 2,
+      "recipe": {
+        "circle": 1,
+        "ink_yellow": 2
+      }
+    },
+    {
+      "id": "treasure",
+      "name": "宝箱",
+      "icon": "img/Treasure.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 4,
+      "recipe": {
+        "coin": 2,
+        "square": 1
+      }
+    }
+  ]
+}

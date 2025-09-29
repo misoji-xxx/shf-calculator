@@ -1,0 +1,167 @@
+/* CSS Variables - Colors only */
+:root {
+  --color-white: #ffffff;
+  --color-border: #e5e7eb;
+  --color-border-input: #d1d5db;
+  --color-muted: #6b7280;
+  --color-bg-soft: #f9fafb;
+  --color-bg-light: #f0f3f6;
+  --color-card-border: #e5e7eb;
+  --color-select-focus: #60a5fa;
+  --color-selected-bg: #fbf2db;
+  --color-selected-border: #be8533;
+  --color-error: #dc3545;
+}
+
+/* Base styles and reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Minimal reset to normalize browser differences */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+:where(button, input, select, textarea) {
+  font: inherit;
+  color: inherit;
+}
+
+/* Link color */
+a,
+a:visited,
+a:hover,
+a:active {
+  color: var(--color-muted);
+}
+
+body {
+  font-family: "IBM Plex Sans JP", sans-serif;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 24px 24px 24px;
+  background: var(--color-bg-soft);
+}
+
+/* Unified select style across sections */
+select {
+  height: 32px;
+  padding: 4px 10px;
+  padding-right: 36px;
+  /* leave space for custom arrow + margin */
+  border: 1px solid var(--color-border-input);
+  border-radius: 6px;
+  background-color: var(--color-white);
+  font-size: 13px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='%236b7280' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  background-size: 16px 16px;
+}
+
+select:focus {
+  outline: 2px solid var(--color-select-focus);
+  outline-offset: 1px;
+  border-color: var(--color-select-focus);
+}
+
+.page {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Setting row layout */
+.settingRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.settingLabel {
+  width: 180px;
+  min-width: 180px;
+  white-space: nowrap;
+  text-align: left;
+  padding: 12px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--color-bg-light);
+  border-radius: 4px;
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+}
+
+.settingOptions {
+  width: 100%;
+  flex: 1;
+  padding: 4px 0;
+}
+
+/* Common state classes */
+.selected {
+  background: var(--color-selected-bg) !important;
+  border-color: var(--color-selected-border) !important;
+}
+
+.error {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--color-error);
+}
+
+/* Checkbox styles */
+.checkbox__label {
+  cursor: pointer;
+  font-weight: normal;
+  width: auto;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.checkbox__text {
+  font-size: 12px;
+}
+
+/* Utility classes */
+.hidden {
+  display: none !important;
+}
+
+/* モバイル対応 - 基本設定 */
+@media (max-width: 768px) {
+  body {
+    margin: 24px 12px;
+  }
+
+  .settingRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .settingLabel {
+    width: 100%;
+    text-align: center;
+  }
+}

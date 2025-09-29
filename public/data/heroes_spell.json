@@ -1,0 +1,311 @@
+{
+  "heroes": [
+    {
+      "id": "fairy",
+      "name": "妖精",
+      "rank": "D",
+      "icon": "img/Fairy.webp",
+      "outputPerCycle": 2,
+      "cycleSec": 2,
+      "recipe": {
+        "circle": 1,
+        "square": 1
+      }
+    },
+    {
+      "id": "mandragora",
+      "name": "マンドラゴラ",
+      "rank": "C",
+      "icon": "img/Mandarake.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 2,
+      "recipe": {
+        "fairy": 1,
+        "leaf": 1
+      }
+    },
+    {
+      "id": "trent",
+      "name": "トレント",
+      "rank": "B",
+      "icon": "img/Trent.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 4,
+      "recipe": {
+        "mandragora": 1,
+        "tree": 1
+      }
+    },
+    {
+      "id": "dryad",
+      "name": "ドリアード",
+      "rank": "A",
+      "icon": "img/Dryad.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 8,
+      "recipe": {
+        "trent": 1,
+        "sun": 1
+      }
+    },
+    {
+      "id": "blackdog",
+      "name": "ブラックドッグ",
+      "rank": "C",
+      "icon": "img/BlackDog.webp",
+      "outputPerCycle": 2,
+      "cycleSec": 2,
+      "recipe": {
+        "fairy": 1,
+        "ink_black": 2
+      }
+    },
+    {
+      "id": "hati",
+      "name": "ハティ",
+      "rank": "B",
+      "icon": "img/Hati.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 4,
+      "recipe": {
+        "blackdog": 1,
+        "ink_cyan": 1
+      }
+    },
+    {
+      "id": "skoll",
+      "name": "スコル",
+      "rank": "B",
+      "icon": "img/Skoll.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 4,
+      "recipe": {
+        "blackdog": 1,
+        "sun": 1
+      }
+    },
+    {
+      "id": "fenrir",
+      "name": "フェンリル",
+      "rank": "A",
+      "icon": "img/Fenrir.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 8,
+      "recipe": {
+        "skoll": 1,
+        "hati": 1,
+        "ink_black": 1
+      }
+    },
+    {
+      "id": "harpy",
+      "name": "ハーピィ",
+      "rank": "C",
+      "icon": "img/Harpy.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 3,
+      "recipe": {
+        "fairy": 1,
+        "wing": 1
+      }
+    },
+    {
+      "id": "siren",
+      "name": "セイレーン",
+      "rank": "B",
+      "icon": "img/Siren.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 6,
+      "recipe": {
+        "harpy": 1,
+        "semicircle": 1,
+        "ink_blue": 1
+      }
+    },
+    {
+      "id": "medusa",
+      "name": "メデューサ",
+      "rank": "A",
+      "icon": "img/Medusa.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 8,
+      "recipe": {
+        "siren": 1,
+        "mandragora": 1,
+        "heart": 1
+      }
+    },
+    {
+      "id": "salamander",
+      "name": "サラマンダー",
+      "rank": "C",
+      "icon": "img/Salamander.webp",
+      "outputPerCycle": 2,
+      "cycleSec": 2,
+      "recipe": {
+        "fairy": 1,
+        "ink_red": 2
+      }
+    },
+    {
+      "id": "wyvern",
+      "name": "ワイバーン",
+      "rank": "B",
+      "icon": "img/Wyvern.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 6,
+      "recipe": {
+        "salamander": 1,
+        "wing": 1
+      }
+    },
+    {
+      "id": "dragon",
+      "name": "ドラゴン",
+      "rank": "A",
+      "icon": "img/Dragon.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 8,
+      "recipe": {
+        "wyvern": 1,
+        "heart": 1,
+        "treasure": 1
+      }
+    },
+    {
+      "id": "thunderbird",
+      "name": "サンダーバード",
+      "rank": "A",
+      "icon": "img/Thunderbird.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 6,
+      "recipe": {
+        "wyvern": 1,
+        "lightning": 1,
+        "ink_magenta": 1
+      }
+    }
+  ],
+  "spells": [
+    {
+      "id": "shot_of_water",
+      "name": "ショットオブウォーター",
+      "rank": "C",
+      "icon": "img/ShotOfWater.webp",
+      "outputPerCycle": 2,
+      "cycleSec": 2,
+      "recipe": {
+        "square": 1,
+        "inkbottle_blue": 2
+      }
+    },
+    {
+      "id": "icicleshot",
+      "name": "アイシクルショット",
+      "rank": "B",
+      "icon": "img/IcicleShot.webp",
+      "outputPerCycle": 2,
+      "cycleSec": 2,
+      "recipe": {
+        "shot_of_water": 1,
+        "inkbottle_cyan": 2
+      }
+    },
+    {
+      "id": "frostlaser",
+      "name": "フロストレーザー",
+      "rank": "A",
+      "icon": "img/FrostLaser.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 4,
+      "recipe": {
+        "icicleshot": 1,
+        "hati": 1
+      }
+    },
+    {
+      "id": "rockfall",
+      "name": "ロックフォール",
+      "rank": "C",
+      "icon": "img/RockFall.webp",
+      "outputPerCycle": 2,
+      "cycleSec": 2,
+      "recipe": {
+        "circle": 1,
+        "inkbottle_black": 2
+      }
+    },
+    {
+      "id": "meteor_spell",
+      "name": "メテオ",
+      "rank": "B",
+      "icon": "img/Meteor.webp",
+      "outputPerCycle": 2,
+      "cycleSec": 3,
+      "recipe": {
+        "rockfall": 1,
+        "inkbottle_red": 2
+      }
+    },
+    {
+      "id": "gravity_spell",
+      "name": "グラビティ",
+      "rank": "A",
+      "icon": "img/Gravity.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 5,
+      "recipe": {
+        "meteor_spell": 1,
+        "orb": 1
+      }
+    },
+    {
+      "id": "lightning_spell",
+      "name": "ライトニング",
+      "rank": "C",
+      "icon": "img/Lightning.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 3,
+      "recipe": {
+        "triangle": 1,
+        "inkbottle_yellow": 1
+      }
+    },
+    {
+      "id": "thunderbolt",
+      "name": "サンダーボルト",
+      "rank": "B",
+      "icon": "img/Thunderbolt.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 4,
+      "recipe": {
+        "lightning_spell": 1,
+        "inkbottle_yellow": 1
+      }
+    },
+    {
+      "id": "thorshammer",
+      "name": "トールハンマー",
+      "rank": "A",
+      "icon": "img/ThorsHammer.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 8,
+      "recipe": {
+        "thunderbolt": 1,
+        "hammer": 1
+      }
+    },
+    {
+      "id": "sanctuary",
+      "name": "サンクチュアリ",
+      "rank": "S",
+      "icon": "img/Sanctuary.webp",
+      "outputPerCycle": 1,
+      "cycleSec": 8,
+      "recipe": {
+        "heart": 1,
+        "inkbottle_white": 1
+      }
+    }
+  ]
+}

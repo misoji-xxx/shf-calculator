@@ -1,0 +1,40 @@
+/* MotifProductionBoosts - 既存システムのスタイルに合わせて移植 */
+
+.motifBoosts {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+.motifBoostsItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.motifBoostsIcon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.motifBoostsSelect {
+  /* Inherits from base select styles in globals.css */
+}
+
+/* モバイル対応 - 横並びを縦並びに */
+@media (max-width: 768px) {
+  .motifBoosts {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .motifBoostsItem {
+    justify-content: space-between;
+  }
+  
+  .motifBoostsSelect {
+    width: 100%;
+  }
+}
